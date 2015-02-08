@@ -2,9 +2,32 @@
 <html>
 <head>
 <title>jquery.keyblock plugin demo</title>
+<style>
+div {
+  margin: 10px;
+}
+label {
+  display: inline-block;
+  width: 60px;
+}
+</style>
 </head>
 <body>
-
-<script src="
+<div>
+  <label>Whitelist:</label><input id="regex" />
+  <button id="attach">Attach</button>
+</div>
+<div>
+  <label>Test:</label><input id="subject" />
+</div>
+<script src="lib/jquery/jquery-1.11.2.js" type="text/javascript"></script>
+<script src="jquery.keyblock.min.js" type="text/javascript"></script>
+<script>
+$(document).ready(function() {
+	$('#attach').click(function() {
+	    $('#subject').keyblock($('#regex').val(), {});
+	});
+});
+</script>
 </body>
 </html>
