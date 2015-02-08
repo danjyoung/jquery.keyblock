@@ -6,4 +6,8 @@ This [jQuery](http://jquery.com/) plugin binds to input fields keypress event an
 // blocks everything except A-Z and 0-9
 // case insensitive by default
 $("#subject").keyblock('A-Z0-9');
+
+// blocks everything except A-Z and 0-9
+// overrides case insensitive default
+$("#subject").keyblock('A-Z0-9', {caseSensitive:true});
 ```
