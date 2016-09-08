@@ -18,7 +18,7 @@
 			if(event.type === 'keypress' && String.fromCharCode(event.which).match(blacklist) && $.inArray(event.which, allowKeys) == -1) {
 				event.preventDefault();
 			}
-			else if (event.type === 'blur' || event.type === 'change') {
+			else if (event.type === 'change') {
 				$this.val($this.val().replace(blacklist, ''));
 			}
 		});
